@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6db5fd73-025b-4757-a098-7460840d8876"
+      }
+    },
+    "owner": "mavissauro"
   }
 }

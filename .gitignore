@@ -16,6 +16,9 @@ web-build/
 *.key
 *.mobileprovision
 
+# idea
+.idea/
+
 # Metro
 .metro-health-check*
 
