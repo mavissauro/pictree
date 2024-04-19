@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {View, Text} from "react-native-ui-lib";
+import { View, Text } from 'react-native-ui-lib';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { View, Button} from "react-native-ui-lib";
+import { View, Button } from 'react-native-ui-lib';
 
 export const InternalizationExample = () => {
   const { t, i18n } = useTranslation();

@@ -1,9 +1,9 @@
 import { InternalizationExample } from 'components/InternalizationExample';
 import { Stack, Link } from 'expo-router';
+import { Button } from 'react-native-ui-lib';
 
 import { Container } from '~/components/Container';
 import { ScreenContent } from '~/components/ScreenContent';
-import {Button} from "react-native-ui-lib";
 
 export default function Home() {
   return (
