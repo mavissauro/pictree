@@ -13,7 +13,7 @@ export default function Home() {
         <ScreenContent path="app/index.tsx" title="Home">
           <InternalizationExample />
         </ScreenContent>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
+        <Link href={{ pathname: '/sign-in' }} asChild>
           <Button label="Show Details" />
         </Link>
       </Container>
