@@ -15,11 +15,10 @@ const useToastStore = create<ToastStoreState & ToastStoreAction>((set) => ({
     visible: false,
     position: 'top',
     message: '',
-    centerMessage: false,
-    zIndex: 1000,
     elevation: 10,
+    autoDismiss: 200,
   },
-  show: (toast: Incubator.ToastProps) => set(() => ({ toast })),
+  show: (toast: Incubator.ToastProps) => set((current) => ({ toast: { ...toast, visible: true } })),
   hide: () => set((current) => ({ toast: { ...current.toast, visible: false } })),
 }));
 

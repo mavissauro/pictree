@@ -5,7 +5,7 @@ import { useToastStore } from '~/utils/toast/toast.store';
 const { Toast } = Incubator;
 
 export const ToastViewport = () => {
-  const { toast } = useToastStore();
+  const { toast, hide } = useToastStore();
 
-  return <Toast {...toast} />;
+  return <Toast autoDismiss={2000} swipeable centerMessage onDismiss={hide} {...toast} />;
 };

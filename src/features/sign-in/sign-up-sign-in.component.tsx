@@ -1,3 +1,4 @@
+import { FontAwesome } from '@expo/vector-icons';
 import { type Provider } from '@supabase/supabase-js';
 import { Link } from 'expo-router';
 import { ReactNode, useState } from 'react';
@@ -19,18 +20,18 @@ export const SignUpSignInComponent = ({
 
   return (
     <>
-      <View paddingH-s5 paddingV-s5 width={350} flex>
+      <View padding-s5 flex>
         <Text text70 marginB-s1>
           {type === 'sign-up' ? 'Create your account' : 'Sign in to your account'}
         </Text>
-        <View flex spread>
+        <View>
           <Button onPress={() => handleOAuthWithPress('google')}>
-            <Image source="/auth/google-logo.png" style={{ width: 20, height: 20 }} />
+            <FontAwesome name="google" size={24} color="white" />
           </Button>
         </View>
-        <View flex spread>
+        <View>
           <View height={0.5} width={10} />
-          <Text text30>or</Text>
+          <Text text70>or</Text>
           <View height={0.25} width={10} />
         </View>
 
@@ -38,18 +39,22 @@ export const SignUpSignInComponent = ({
         <TextField
           autoCapitalize="none"
           placeholder="Email"
+          preset="email"
           onChangeText={(text: string) => {
             setEmail(text);
           }}
+          floatingPlaceholder
         />
         <TextField
           autoCapitalize="none"
+          preset="password"
           placeholder="Password"
           onChangeText={(text) => {
             setPassword(text);
           }}
           textContentType="password"
           secureTextEntry
+          floatingPlaceholder
         />
 
         {/* sign up button */}
@@ -62,7 +67,7 @@ export const SignUpSignInComponent = ({
         />
 
         {/* or sign in, in small and less opaque font */}
-        <View flex>
+        <View>
           <Text marginR-s2>
             {type === 'sign-up' ? 'Already have an account?' : 'Don’t have an account?'}
           </Text>

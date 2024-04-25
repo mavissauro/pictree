@@ -10,7 +10,7 @@ const PasswordResetComponent: FC<PasswordResetProps> = ({ type, handleWithPress 
   const [emailOrPassword, setEmailOrPassword] = useState('');
 
   return (
-    <View BR-10 paddingH-7 paddingV-6 width={350}>
+    <View BR-10 paddingH-7 paddingV-6>
       <Text text-70 marginB-1>
         {type === 'email' ? 'Reset your password' : 'Change your password'}
       </Text>
@@ -41,9 +41,9 @@ const PasswordResetComponent: FC<PasswordResetProps> = ({ type, handleWithPress 
         themeInverse
         onPress={() => {
           handleWithPress(emailOrPassword);
-        }}>
-        {type === 'email' ? 'Reset Password' : 'Change Password'}
-      </Button>
+        }}
+        label={type === 'email' ? 'Reset Password' : 'Change Password'}
+      />
     </View>
   );
 };

@@ -99,7 +99,7 @@ export const SignInContainer = (): ReactNode => {
       password,
     });
     if (error) {
-      toast.show({ message: 'Sign in failed', preset: 'failure' });
+      toast.show({ message: `Sign in failed. Error: ${error.message}`, preset: 'failure' });
       return;
     }
 
